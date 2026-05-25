@@ -117,7 +117,7 @@ export default function Projects() {
                   </div>
 
                   <span className="text-[10px] font-mono tracking-wide text-blue-900/50 uppercase flex items-center gap-1 group-hover:text-primary-custom transition-colors">
-                    Engineered to Perfection
+                    Design & Development
                     <span className="w-1 h-1 rounded-full bg-neutral-custom" />
                   </span>
                 </div>

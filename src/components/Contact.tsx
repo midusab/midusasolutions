@@ -50,7 +50,7 @@ export default function Contact() {
             Let's Engineer Your <span className="text-primary-custom font-bold">Online Success</span>
           </h2>
           <p className="text-blue-900/80 text-sm font-light">
-            Ready to upgrade your business footprint? Send us a direct operation brief or ask about branding packages, restaurant setups, and bespoke database platforms.
+            Ready to upgrade your business footprint? Send us a direct operation brief or ask about branding packages, restaurant setups, and custom database platforms.
           </p>
         </div>
 
@@ -194,7 +194,7 @@ export default function Contact() {
                     <option value="Website Design">Website Systems (Business, Informational, Restaurant)</option>
                     <option value="E-commerce Solutions">E-commerce platforms (Stripe, Product Catalogues)</option>
                     <option value="Graphic Deliverables font-sans">Graphic Design (Flyers, Posters, Vector Logo Kits)</option>
-                    <option value="Bespoke Custom Software">Bespoke Enterprise Software (CRM, Portals)</option>
+                    <option value="Custom Software">Custom Enterprise Software (CRM, Portals)</option>
                   </select>
                 </div>
 

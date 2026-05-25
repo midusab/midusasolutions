@@ -6,6 +6,7 @@ export interface Service {
   description: string;
   shortDesc: string;
   priceEstimate: string;
+  image: string;
   features: string[];
 }
 

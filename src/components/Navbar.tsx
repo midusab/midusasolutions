@@ -87,7 +87,7 @@ export default function Navbar({ activeSection, onNavigate, onOpenPlanner }: Nav
             className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary-custom to-blue-700 text-white text-sm font-semibold rounded-xl hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary-custom/15 cursor-pointer"
           >
             <Rocket className="w-4 h-4" />
-            Launch Planner
+            Get Free Quote
           </button>
         </div>
 
@@ -144,7 +144,7 @@ export default function Navbar({ activeSection, onNavigate, onOpenPlanner }: Nav
             className="w-full py-3.5 bg-gradient-to-r from-primary-custom to-blue-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary-custom/10 cursor-pointer"
           >
             <Rocket className="w-4 h-4" />
-            Instant Project Planner
+            Get Free Quote
           </button>
         </div>
       )}

@@ -127,7 +127,7 @@ export default function App() {
             </p>
 
             <span className="block font-mono text-[10px] text-primary-custom uppercase tracking-wider font-semibold">
-              Engineered to Perfection
+              Digital Design & Development
             </span>
           </div>
 

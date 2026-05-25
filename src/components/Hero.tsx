@@ -36,7 +36,7 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
           className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50/80 border border-primary-custom/30 text-[11px] font-mono tracking-wide text-primary-custom mb-8 animate-in fade-in slide-in-from-bottom-3 duration-500"
         >
           <Sparkles className="w-3.5 h-3.5 text-highlight-custom" />
-          <span className="text-blue-950 font-bold uppercase">PRO DESIGN & BESPOKE DEVELOPMENT</span>
+          <span className="text-blue-950 font-bold uppercase">PRO DESIGN & CUSTOM DEVELOPMENT</span>
           <span className="w-1.5 h-1.5 rounded-full bg-neutral-custom" />
         </div>
 
@@ -47,20 +47,21 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
         >
           Your One-Stop{' '}
           <span className="text-primary-custom relative inline-block">
-            Software Developer
+            Website Design & Development
             <span className="absolute left-0 bottom-1 w-full h-1.5 bg-gradient-to-r from-primary-custom to-highlight-custom rounded-full opacity-40" />
-          </span>
+          </span>{' '}
+          Partner
         </h1>
 
         {/* Subtitle */}
         <p
           id="hero-subtitle"
-          className="text-blue-900/80 text-lg sm:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-5 duration-900"
+          className="text-blue-900/80 text-lg sm:text-xl font-light max-w-3xl mx-auto mb-10 leading-relaxed animate-in fade-in slide-in-from-bottom-5 duration-900"
         >
-          Midusa transforms local enterprises with high-performance{' '}
-          <span className="text-blue-950 font-semibold">web designs</span>,{' '}
-          <span className="text-blue-950 font-semibold">high-impact graphics</span>,{' '}
-          and <span className="text-blue-950 font-semibold">custom software workflows</span> built to convert leads.
+          We engineer fast, beautiful {' '}
+          <span className="text-blue-950 font-semibold">websites and UI/UX designs</span>,{' '}
+          seamless <span className="text-blue-950 font-semibold">WhatsApp e-commerce stores</span>,{' '}
+          and eye-catching graphic posters customized to boost your local business footprint.
         </p>
 
         {/* Dynamic CTAs */}
@@ -71,18 +72,18 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
           <button
             id="hero-primary-cta"
             onClick={onOpenPlanner}
-            className="w-full sm:w-auto px-8 py-4 bg-primary-custom hover:bg-blue-600 active:scale-98 text-white font-bold rounded-xl shadow-lg shadow-primary-custom/25 flex items-center justify-center gap-2.5 transition-all text-base cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-primary-custom hover:bg-blue-600 active:scale-98 text-white font-bold rounded-xl shadow-lg shadow-primary-custom/25 flex items-center justify-center gap-2.5 transition-all text-base cursor-pointer hover:scale-[1.02]"
           >
-            Launch Project Planner
+            Get a Free Project Quote
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform animate-pulse" />
           </button>
           
           <button
             id="hero-secondary-cta"
             onClick={onExploreServices}
-            className="w-full sm:w-auto px-8 py-4 bg-blue-50 hover:bg-blue-100 text-primary-custom border border-blue-100 font-semibold hover:border-blue-200 rounded-xl flex items-center justify-center gap-2 transition-all text-base cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 bg-blue-50 hover:bg-blue-100 text-primary-custom border border-blue-100 font-semibold hover:border-blue-200 rounded-xl flex items-center justify-center gap-2 transition-all text-base cursor-pointer hover:scale-[1.02]"
           >
-            Explore Services
+            View What I Do
           </button>
         </div>
 

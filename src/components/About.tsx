@@ -12,7 +12,7 @@ export default function About() {
     {
       icon: <Lightbulb className="w-6 h-6 text-highlight-custom" />,
       title: 'High-Impact Brand Graphics',
-      desc: 'From custom corporate visual guides to traffic-stopping flyers and poster graphics, we construct beautiful designs that lock in customer memory.',
+      desc: 'From high-quality custom logos to traffic-stopping flyers and poster graphics, we construct beautiful designs that lock in customer memory.',
       borderAccent: 'border-l-highlight-custom'
     },
     {
@@ -66,7 +66,7 @@ export default function About() {
               </div>
               <div className="p-4 bg-blue-50/30 rounded-xl border border-blue-100/50">
                 <span className="font-mono text-xl font-bold text-neutral-custom">03</span>
-                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Bespoke Code</h4>
+                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Custom Code</h4>
                 <p className="text-xs text-blue-900/70 mt-1">Custom operations software and database tools.</p>
               </div>
             </div>
@@ -75,11 +75,6 @@ export default function About() {
           {/* Right Column: Dynamic decorative card stack & highlights */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-8 bg-blue-50/10 border border-blue-100 rounded-2xl relative shadow-md shadow-blue-100/10">
-              {/* Highlight ribbon representing brand accentuation */}
-              <div className="absolute top-0 right-10 transform -translate-y-1/2 bg-highlight-custom text-white text-[10px] font-mono font-bold tracking-widest uppercase px-3.5 py-1 rounded-full shadow-lg">
-                ENGINEERED FOR PERFECTION
-              </div>
-
               <h3 className="font-display font-semibold text-xl text-blue-950 mb-6 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-neutral-custom animate-pulse" />
                 The Midusa Advantage

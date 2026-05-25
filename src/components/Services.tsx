@@ -77,25 +77,36 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
               <div
                 key={service.id}
                 id={`service-card-${service.id}`}
-                className="group p-8 bg-white rounded-2xl border border-blue-100/80 hover:border-primary-custom hover:shadow-xl hover:shadow-blue-100/30 transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+                className="group p-6 bg-white rounded-2xl border border-blue-100/80 hover:border-primary-custom hover:shadow-xl hover:shadow-blue-100/30 transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
               >
                 {/* Glow layer on hover */}
                 <div className="absolute inset-0 bg-radial-gradient from-primary-custom/4 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-                <div className="relative z-10 space-y-6">
+                <div className="relative z-10 space-y-5">
+                  {/* Service Visual Cover Image */}
+                  <div className="relative h-44 w-full rounded-xl overflow-hidden bg-blue-50 border border-blue-100/50 shadow-sm">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-950/10 via-transparent to-transparent" />
+                  </div>
+
                   {/* Service Accent Head */}
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100/60 flex items-center justify-center text-primary-custom group-hover:bg-primary-custom group-hover:text-white transition-all duration-300 shadow-sm">
-                      <IconComponent className="w-6 h-6" />
+                    <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100/60 flex items-center justify-center text-primary-custom group-hover:bg-primary-custom group-hover:text-white transition-all duration-300 shadow-sm">
+                      <IconComponent className="w-5 h-5" />
                     </div>
                     {/* Badge showing Price Estimate in Electric Blue */}
-                    <span className="text-xs font-mono font-bold tracking-wide px-3 py-1 rounded-full bg-blue-50/80 text-highlight-custom border border-blue-100">
+                    <span className="text-[11px] font-mono font-bold tracking-wide px-2.5 py-1 rounded-full bg-blue-50/80 text-highlight-custom border border-blue-100">
                       {service.priceEstimate}
                     </span>
                   </div>
 
                   {/* Title & Descs */}
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <h3 className="font-display font-bold text-lg text-blue-950 group-hover:text-primary-custom transition-colors">
                       {service.title}
                     </h3>
@@ -105,10 +116,10 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
                   </div>
 
                   {/* Feature Lists with Neutral Blue checkmarks */}
-                  <ul className="space-y-2.5 pt-4 border-t border-blue-50">
+                  <ul className="space-y-2 pt-3 border-t border-blue-50">
                     {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2.5 text-xs text-blue-900/85 font-light">
-                        <Check className="w-4 h-4 text-primary-custom shrink-0 mt-0.5" />
+                      <li key={index} className="flex items-start gap-2 text-xs text-blue-900/85 font-light">
+                        <Check className="w-3.5 h-3.5 text-primary-custom shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -116,7 +127,7 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
                 </div>
 
                 {/* Card CTA Trigger */}
-                <div className="relative z-10 pt-8 mt-6 border-t border-blue-50 flex items-center justify-between">
+                <div className="relative z-10 pt-6 mt-5 border-t border-blue-50 flex items-center justify-between">
                   <span className="text-[10px] font-mono tracking-wider text-blue-900/50 uppercase group-hover:text-blue-900/70 transition-colors">
                     Tailored Custom Specs Available
                   </span>
@@ -144,10 +155,10 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
           <div className="space-y-1 text-center md:text-left relative z-10">
             <h4 className="font-display font-semibold text-blue-950 text-base md:text-lg flex items-center justify-center md:justify-start gap-2">
               <Zap className="w-4 h-4 text-primary-custom animate-bounce" />
-              Not sure which digital package matches your local storefront?
+              Not sure which digital package matches your business?
             </h4>
             <p className="text-blue-900/70 text-xs font-light">
-              Use our smart interactive blueprint calculator to determine budgets, design times, and key technical integrations instantly.
+              We can custom craft any design or development system fit for your specific local business setup.
             </p>
           </div>
 
@@ -156,7 +167,7 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
             onClick={onOpenPlanner}
             className="px-6 py-3 bg-primary-custom text-white hover:bg-blue-600 font-bold rounded-xl text-sm transition-all shadow-md shadow-primary-custom/10 cursor-pointer text-center shrink-0 relative z-10"
           >
-            Launch Interactive Planner
+            Get a Special Quote
           </button>
         </div>
       </div>
