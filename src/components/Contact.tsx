@@ -163,7 +163,7 @@ export default function Contact() {
           </div>
 
           {/* Right Block: Message Capture Form */}
-          <div className="lg:col-span-7 p-8 bg-white border border-blue-105 rounded-2xl relative shadow-md shadow-blue-100/10">
+          <div className="lg:col-span-7 p-8 bg-white border border-blue-100 rounded-2xl relative shadow-md shadow-blue-100/10">
             <div className="absolute top-0 right-0 w-2 h-full bg-primary-custom" />
             
             {submitted ? (

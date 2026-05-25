@@ -125,7 +125,7 @@ export default function Projects() {
 
         {/* Empty state callback */}
         {filteredProjects.length === 0 && (
-          <div className="py-16 text-center border border-dashed border-blue-150 rounded-2xl bg-blue-50/20">
+          <div className="py-16 text-center border border-dashed border-blue-200 rounded-2xl bg-blue-50/20">
             <p className="text-blue-900/60 text-sm">More portfolio solutions added soon.</p>
           </div>
         )}

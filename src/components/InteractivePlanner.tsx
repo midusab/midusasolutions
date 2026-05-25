@@ -132,8 +132,8 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
                         onClick={() => toggleService(srv)}
                         className={`p-3 rounded-xl border text-left flex items-center justify-between gap-3 transition-colors cursor-pointer text-xs ${
                           isChecked
-                            ? 'bg-blue-55 border-primary-custom text-blue-950 font-medium'
-                            : 'bg-white border-blue-100 text-blue-905 hover:bg-blue-50/20 hover:border-blue-200'
+                            ? 'bg-blue-50 border-primary-custom text-blue-950 font-medium'
+                            : 'bg-white border-blue-100 text-blue-900/80 hover:bg-blue-50/20 hover:border-blue-200'
                         }`}
                       >
                         <span>{srv}</span>

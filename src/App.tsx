@@ -216,7 +216,7 @@ function AppContent() {
         </div>
 
         {/* Footer legal bounds */}
-        <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-blue-105 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-blue-900/50 font-mono">
+        <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-blue-900/50 font-mono">
           <p>© {new Date().getFullYear()} Midusa Digital Solutions. All Rights Reserved.</p>
           <div className="flex gap-4">
             <a href="#about" className="hover:text-primary-custom">Privacy Operations</a>

@@ -79,7 +79,7 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
         {/* Social Proof/Neutrality Streaks */}
         <div
           id="hero-streaks"
-          className="mt-16 pt-8 border-t border-blue-150 max-w-3xl mx-auto flex flex-wrap items-center justify-around gap-y-4 gap-x-6 text-xs text-blue-900/70 font-mono"
+          className="mt-16 pt-8 border-t border-blue-100 max-w-3xl mx-auto flex flex-wrap items-center justify-around gap-y-4 gap-x-6 text-xs text-blue-900/70 font-mono"
         >
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-neutral-custom" />
