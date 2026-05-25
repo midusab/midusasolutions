@@ -26,27 +26,25 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
   // Initialize selected service if pre-selected
   useEffect(() => {
     if (preselectedServiceId) {
-      if (preselectedServiceId === 'web-business') {
-        setSelectedServices(['Website Design & Development']);
-      } else if (preselectedServiceId === 'web-ecommerce') {
-        setSelectedServices(['E-commerce with WhatsApp Ordering']);
-      } else if (preselectedServiceId === 'ui-ux-design') {
-        setSelectedServices(['UI/UX Design & Wireframing']);
-      } else if (preselectedServiceId === 'graphic-branding') {
-        setSelectedServices(['UI/UX Design & Wireframing', 'Graphics Design (Flyers & Posters)']);
-      } else if (preselectedServiceId === 'graphic-campaigns') {
-        setSelectedServices(['Graphics Design (Flyers & Posters)']);
+      if (preselectedServiceId === 'web-development') {
+        setSelectedServices(['Website Development']);
+      } else if (preselectedServiceId === 'web-design') {
+        setSelectedServices(['Website Design & UI/UX']);
+      } else if (preselectedServiceId === 'posters-flyers') {
+        setSelectedServices(['Posters & Flyers Design']);
+      } else if (preselectedServiceId === 'clothing-ecommerce') {
+        setSelectedServices(['Clothing & Retail E-commerce']);
       } else {
-        setSelectedServices(['Website Design & Development']);
+        setSelectedServices(['Website Development']);
       }
     }
   }, [preselectedServiceId]);
 
   const serviceOptions = [
-    'Website Design & Development',
-    'E-commerce with WhatsApp Ordering',
-    'UI/UX Design & Wireframing',
-    'Graphics Design (Flyers & Posters)'
+    'Website Development',
+    'Website Design & UI/UX',
+    'Posters & Flyers Design',
+    'Clothing & Retail E-commerce'
   ];
 
   const toggleService = (srv: string) => {

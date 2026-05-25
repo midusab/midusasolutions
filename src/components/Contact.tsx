@@ -6,7 +6,7 @@ export default function Contact() {
   const { showToast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [service, setService] = useState('Website Design');
+  const [service, setService] = useState('Website Development');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -68,7 +68,7 @@ export default function Contact() {
             Let's Engineer Your <span className="text-primary-custom font-bold">Online Success</span>
           </h2>
           <p className="text-blue-900/80 text-sm font-light">
-            Ready to upgrade your business footprint? Send us a direct operation brief or ask about branding packages, restaurant setups, and custom database platforms.
+            Ready to upgrade your business footprint? Send us a direct operation brief to discuss custom hotel websites, portfolio showcases, online clothing stores, and custom flyers or posters to boost your local presence.
           </p>
         </div>
 
@@ -229,10 +229,10 @@ export default function Contact() {
                     onChange={(e) => setService(e.target.value)}
                     className="w-full bg-blue-50/30 border border-blue-100 focus:border-primary-custom focus:bg-white rounded-xl px-4 py-3.5 text-sm text-blue-950 focus:outline-none focus:ring-1 focus:ring-primary-custom transition-all"
                   >
-                    <option value="Website Design">Website Systems (Business, Informational, Restaurant)</option>
-                    <option value="E-commerce Solutions">E-commerce platforms (Stripe, Product Catalogues)</option>
-                    <option value="Graphic Deliverables font-sans">Graphic Design (Flyers, Posters, Vector Logo Kits)</option>
-                    <option value="Custom Software">Custom Enterprise Software (CRM, Portals)</option>
+                    <option value="Website Development">Website Development (Hotel, Portfolio, Startup sites)</option>
+                    <option value="Website Design & UI/UX">Website Design & UI/UX layouts</option>
+                    <option value="Posters & Flyers Design">Posters & Flyers Design</option>
+                    <option value="Clothing & Retail E-commerce">Clothing & Retail E-commerce (WhatsApp integration)</option>
                   </select>
                 </div>
 

@@ -5,20 +5,20 @@ export default function About() {
   const pillars = [
     {
       icon: <Target className="w-6 h-6 text-primary-custom" />,
-      title: 'Precision-Engineered ROI',
-      desc: 'We do not build generic landing pages. We architect digital systems loaded with SEO structures, high-efficiency caching, and direct client capture tools.',
+      title: 'Understanding Your Needs',
+      desc: 'We do not build generic pages. We map out what makes your business unique and engineer exact websites to capture active client phone calls and booking questions.',
       borderAccent: 'border-l-primary-custom'
     },
     {
       icon: <Lightbulb className="w-6 h-6 text-highlight-custom" />,
-      title: 'High-Impact Brand Graphics',
-      desc: 'From high-quality custom logos to traffic-stopping flyers and poster graphics, we construct beautiful designs that lock in customer memory.',
+      title: 'Promotional Poster & Flyer Design',
+      desc: 'Get gorgeous print-ready poster banners and online flyer designs tailored to establish unified, strong visual branding anywhere local customers browse.',
       borderAccent: 'border-l-highlight-custom'
     },
     {
       icon: <ShieldCheck className="w-6 h-6 text-neutral-custom" />,
-      title: 'Trust & Integrity',
-      desc: 'We support local eateries, retail groups, and service agencies with transparent pricing, comprehensive ownership transfers, and commission-free tools.',
+      title: 'Boosting Local Presence',
+      desc: 'We exist to help hard-working local operators stand out online with clean layouts, clear rates, and complete codebase and asset ownership.',
       borderAccent: 'border-l-neutral-custom'
     }
   ];
@@ -42,29 +42,29 @@ export default function About() {
             </div>
 
             <p className="text-blue-900/80 text-base sm:text-lg font-light leading-relaxed">
-              At <strong className="text-blue-950 font-bold">Midusa Digital Solutions</strong>, our goal is absolute. We partner with local companies—from neighborhood pizzerias and boutique dental clinics to professional consultants, builders, and retailers—to craft custom website designs, search optimization strategies, and professional graphic deliverables.
+              At <strong className="text-blue-950 font-bold">Midusa Digital Solutions</strong>, our goal is absolute. We partner with local companies—from neighborhood shops, boutiques, and delivery ventures to local services—who currently lack a strong online business presence. We understand your unique needs and engineer tailored websites and graphic assets that build immediate trust.
             </p>
 
             <p className="text-blue-900/60 text-sm leading-relaxed">
-              Our agency was founded on the philosophy that local businesses deserve the exact same professional quality, search ranking potential, and modern custom setups enjoyed by national brands. We eliminate third-party ordering commissions, build fast-loading pages, and deliver clean branding visual kits tailored exactly to your business goals.
+              Our agency was founded on the philosophy that local businesses deserve the exact same professional quality, design standards, and modern custom setups enjoyed by national brands. We focus purely on what works: clean website layouts, modern Inter typography, and crisp marketing visuals like flyers and posters that attract active local buyers.
             </p>
 
             {/* Core Pillars Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
               <div className="p-4 bg-blue-50/30 rounded-xl border border-blue-100/50">
                 <span className="font-mono text-xl font-bold text-primary-custom">01</span>
-                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Design Craft</h4>
-                <p className="text-xs text-blue-900/70 mt-1">E-commerce, portfolios, informational frameworks.</p>
+                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Website Coding</h4>
+                <p className="text-xs text-blue-900/70 mt-1">Stunning hotel, portfolio, and clothing e-commerce systems.</p>
               </div>
               <div className="p-4 bg-blue-50/30 rounded-xl border border-blue-100/50">
                 <span className="font-mono text-xl font-bold text-highlight-custom">02</span>
-                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Action Ads</h4>
-                <p className="text-xs text-blue-900/70 mt-1">High-impact flyers, print banners, vector logos.</p>
+                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Posters & Flyers</h4>
+                <p className="text-xs text-blue-900/70 mt-1">Eye-catching, high-resolution promotional marketing graphics.</p>
               </div>
               <div className="p-4 bg-blue-50/30 rounded-xl border border-blue-100/50">
                 <span className="font-mono text-xl font-bold text-neutral-custom">03</span>
-                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Custom Code</h4>
-                <p className="text-xs text-blue-900/70 mt-1">Custom operations software and database tools.</p>
+                <h4 className="font-semibold text-blue-950 mt-1 text-sm">Client Presence</h4>
+                <p className="text-xs text-blue-900/70 mt-1">Understanding business needs to maximize active inquiries.</p>
               </div>
             </div>
           </div>
