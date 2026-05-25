@@ -21,9 +21,6 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-4 max-w-2xl">
-            <span className="text-xs font-mono tracking-widest text-primary-custom font-semibold uppercase block">
-              PORTFOLIO OF SUCCESS
-            </span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-blue-950 tracking-tight">
               Fusing <span className="text-highlight-custom">Stunning Visuals</span> with Premium Code
             </h2>

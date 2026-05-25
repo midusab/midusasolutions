@@ -158,11 +158,5 @@ export const FAQS: FAQItem[] = [
     question: 'Are there hidden or recurring platform fees with custom software?',
     answer: 'No hidden fees. We believe in absolute neutrality and transparency. We construct custom systems that you own entirely. Host options, service integrations, and domain setup will be itemized in our initial blueprint phase.',
     category: 'Software'
-  },
-  {
-    id: 'faq-5',
-    question: 'What is your primary color coding and design system?',
-    answer: 'We craft digital interfaces with intention: Dodgerblue represents our professional technological stability (Primary), Red serves as high-impact highlights for action items and critical conversion elements, and Green offers a premium neutralist aesthetic.',
-    category: 'Aesthetics'
   }
 ];

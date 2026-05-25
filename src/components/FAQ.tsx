@@ -18,9 +18,6 @@ export default function FAQ() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 mb-16 max-w-2xl mx-auto">
-          <span className="text-[11px] font-mono tracking-widest text-primary-custom font-semibold uppercase px-3.5 py-1 bg-blue-50 rounded-full border border-blue-100">
-            COMMON CONCERNS
-          </span>
           <h2 className="font-display font-bold text-3xl text-blue-950 tracking-tight">
             Answering Your <span className="text-neutral-custom">Development & Design Questions</span>
           </h2>

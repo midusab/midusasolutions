@@ -40,9 +40,6 @@ export default function Services({ onSelectService, onOpenPlanner }: ServicesPro
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
-          <span className="text-[11px] font-mono tracking-widest text-primary-custom font-semibold uppercase px-3.5 py-1 bg-blue-50 rounded-full border border-blue-100/70">
-            OUR SPECTRUM OF SOLUTIONS
-          </span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-blue-950 tracking-tight">
             High-Performance Digital Products Built to <span className="text-primary-custom">Grow Your Brand</span>
           </h2>

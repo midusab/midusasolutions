@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { X, Check, Send, Sparkles, Phone, Mail, CheckCircle } from 'lucide-react';
 import { OutreachSubmission } from '../types';
+import { useToast } from './Toast';
 
 interface InteractivePlannerProps {
   onClose: () => void;
@@ -9,6 +10,7 @@ interface InteractivePlannerProps {
 }
 
 export default function InteractivePlanner({ onClose, preselectedServiceId }: InteractivePlannerProps) {
+  const { showToast } = useToast();
   // Simple form state
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [clientName, setClientName] = useState('');
@@ -80,6 +82,12 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
 
       setIsSubmitting(false);
       setSubmitted(true);
+      showToast(
+        'success',
+        'Spec Sent successfully!',
+        'Your quote has been calculated and sent to our Nairobi design agency lead.',
+        5000
+      );
     }, 1000);
   };
 
@@ -96,7 +104,6 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
         <div className="flex-1 p-6 md:p-8 overflow-y-auto bg-white">
           <div className="flex items-center justify-between border-b border-blue-100 pb-4 mb-6">
             <div>
-              <span className="text-[10px] font-mono text-primary-custom uppercase tracking-wider font-semibold">GET A QUICK QUOTE</span>
               <h4 className="font-display font-bold text-xl text-blue-950">Let's Discuss Your Project</h4>
             </div>
             <button
@@ -246,11 +253,6 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
         {/* Right Column: Key details sidebar */}
         <div className="hidden md:flex md:w-64 bg-blue-50/60 p-6 flex-col justify-between border-l border-blue-100">
           <div className="space-y-6">
-            <div className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-primary-custom" />
-              <span className="text-[10px] font-mono text-blue-950 font-bold uppercase tracking-wider">OUR PROMISE</span>
-            </div>
-
             <div className="space-y-4 text-[11px] leading-relaxed text-blue-950">
               <div className="space-y-1">
                 <h6 className="font-bold">No Templates, Pure Custom Design</h6>
@@ -270,8 +272,8 @@ export default function InteractivePlanner({ onClose, preselectedServiceId }: In
           </div>
 
           <div className="pt-4 border-t border-blue-100 text-[10px] font-mono text-blue-900/50 flex flex-col gap-1.5">
-            <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-primary-custom" /> solutions@midusa.com</span>
-            <span className="flex items-center gap-1 leading-tight"><Phone className="w-3 h-3 text-neutral-custom" /> Nairobi, Kenya</span>
+            <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-primary-custom" /> midusab@gmail.com</span>
+            <span className="flex items-center gap-1 leading-tight"><Phone className="w-3 h-3 text-neutral-custom" /> 0112478220</span>
           </div>
         </div>
 

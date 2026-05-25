@@ -35,9 +35,6 @@ export default function About() {
           {/* Left Column: Visual copy & brand details */}
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
-              <span className="text-xs font-mono tracking-widest text-primary-custom font-semibold uppercase block">
-                MIDUSA ETHOS
-              </span>
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-blue-950 tracking-tight leading-tight">
                 Empowering Local Businesses to Dominate the{' '}
                 <span className="text-primary-custom">Online Marketplace</span>

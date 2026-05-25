@@ -30,16 +30,6 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
       </div>
 
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center pt-8 md:pt-16">
-        {/* Badge Indicator */}
-        <div
-          id="hero-badge"
-          className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50/80 border border-primary-custom/30 text-[11px] font-mono tracking-wide text-primary-custom mb-8 animate-in fade-in slide-in-from-bottom-3 duration-500"
-        >
-          <Sparkles className="w-3.5 h-3.5 text-highlight-custom" />
-          <span className="text-blue-950 font-bold uppercase">PRO DESIGN & CUSTOM DEVELOPMENT</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-neutral-custom" />
-        </div>
-
         {/* Big Display Punchline with custom primary/highlight styling */}
         <h1
           id="hero-title"
@@ -48,7 +38,6 @@ export default function Hero({ onExploreServices, onOpenPlanner }: HeroProps) {
           Your One-Stop{' '}
           <span className="text-primary-custom relative inline-block">
             Website Design & Development
-            <span className="absolute left-0 bottom-1 w-full h-1.5 bg-gradient-to-r from-primary-custom to-highlight-custom rounded-full opacity-40" />
           </span>{' '}
           Partner
         </h1>

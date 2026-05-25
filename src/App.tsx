@@ -8,13 +8,36 @@ import Projects from './components/Projects';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import InteractivePlanner from './components/InteractivePlanner';
-import { Mail, MapPin, ExternalLink, ArrowUp, Rocket, Check, HelpCircle } from 'lucide-react';
+import ErrorBoundary from './components/ErrorBoundary';
+import { ToastProvider, useToast } from './components/Toast';
+import { Mail, MapPin, ExternalLink, ArrowUp, Rocket, Check, HelpCircle, Copy, Phone } from 'lucide-react';
 
 export default function App() {
+  return (
+    <ErrorBoundary>
+      <ToastProvider>
+        <AppContent />
+      </ToastProvider>
+    </ErrorBoundary>
+  );
+}
+
+function AppContent() {
+  const { showToast } = useToast();
   const [activeSection, setActiveSection] = useState('home');
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [preselectedServiceId, setPreselectedServiceId] = useState<string | undefined>(undefined);
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      navigator.clipboard.writeText('midusab@gmail.com');
+      showToast('success', 'Email Copied!', 'Solutions email (midusab@gmail.com) has been copied to your clipboard.', 3500);
+    } catch (err) {
+      showToast('error', 'Unable to Copy', 'Please highlight and copy midusab@gmail.com manually!');
+    }
+  };
 
   // Monitor scroll behavior to highlight navbar links and show ScrollToTop button
   useEffect(() => {
@@ -154,13 +177,27 @@ export default function App() {
             <ul className="space-y-2.5 text-blue-900/80">
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-primary-custom" />
-                <a href="mailto:solutions@midusa.com" className="hover:text-primary-custom transition-colors">
-                  solutions@midusa.com
+                <button
+                  onClick={handleCopyEmail}
+                  className="hover:text-primary-custom transition-all cursor-pointer flex items-center gap-1.5 focus:outline-none text-left group text-xs sm:text-sm"
+                  title="Copy email to clipboard"
+                >
+                  <span>midusab@gmail.com</span>
+                  <Copy className="w-3 h-3 text-blue-900/30 group-hover:text-primary-custom transition-colors cursor-pointer" />
+                </button>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-neutral-custom shrink-0" />
+                <a
+                  href="tel:0112478220"
+                  className="hover:text-primary-custom transition-colors font-medium text-xs sm:text-sm"
+                >
+                  0112478220
                 </a>
               </li>
-              <li className="flex items-center gap-2 leading-relaxed">
+              <li className="flex items-center gap-2 leading-relaxed text-xs">
                 <MapPin className="w-3.5 h-3.5 text-neutral-custom shrink-0" />
-                <span>Nairobi, Kenya — Serving clients worldwide</span>
+                <span>Nairobi, Kenya</span>
               </li>
             </ul>
           </div>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Send, MapPin, Mail, Clock, ShieldCheck, HelpCircle, Sparkles } from 'lucide-react';
+import { Send, MapPin, Mail, Clock, ShieldCheck, HelpCircle, Sparkles, Copy, Phone } from 'lucide-react';
+import { useToast } from './Toast';
 
 export default function Contact() {
+  const { showToast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [service, setService] = useState('Website Design');
@@ -9,9 +11,22 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    try {
+      navigator.clipboard.writeText('midusab@gmail.com');
+      showToast('success', 'Email Copied!', 'Solutions email (midusab@gmail.com) has been copied to your clipboard.', 3500);
+    } catch (err) {
+      showToast('error', 'Unable to Copy', 'Please highlight and copy midusab@gmail.com manually!');
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !email || !message) return;
+    if (!name || !email || !message) {
+      showToast('error', 'Incomplete Form', 'Please fill in all the required fields.');
+      return;
+    }
 
     setSubmitting(true);
     setTimeout(() => {
@@ -28,10 +43,16 @@ export default function Contact() {
       
       setSubmitting(false);
       setSubmitted(true);
+      showToast(
+        'success',
+        'Inquiry Registered!',
+        `Thank you ${name}. Our development & design lead will review your brief shortly!`,
+        5000
+      );
       setName('');
       setEmail('');
       setMessage('');
-    }, 1000);
+    }, 1005);
   };
 
   return (
@@ -43,9 +64,6 @@ export default function Contact() {
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto mb-16">
-          <span className="text-[11px] font-mono tracking-widest text-highlight-custom font-semibold uppercase px-3.5 py-1 bg-blue-50 rounded-full border border-blue-100">
-            CLIENT OUTREACH
-          </span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-blue-950 tracking-tight">
             Let's Engineer Your <span className="text-primary-custom font-bold">Online Success</span>
           </h2>
@@ -81,8 +99,28 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="block text-blue-900/50 font-mono text-[10px] uppercase">Email Contact Address</span>
-                    <a href="mailto:solutions@midusa.com" className="text-sm font-bold text-blue-950 hover:text-primary-custom hover:underline transition-colors block mt-0.5">
-                      solutions@midusa.com
+                    <button
+                      onClick={handleCopyEmail}
+                      className="text-sm font-bold text-blue-950 hover:text-primary-custom transition-all flex items-center gap-1.5 mt-0.5 group focus:outline-none cursor-pointer"
+                      title="Copy email address"
+                    >
+                      <span>midusab@gmail.com</span>
+                      <Copy className="w-3.5 h-3.5 text-blue-900/30 group-hover:text-primary-custom transition-colors cursor-pointer" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-neutral-custom shrink-0 mt-0.5 shadow-sm">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="block text-blue-900/50 font-mono text-[10px] uppercase">Phone / WhatsApp</span>
+                    <a
+                      href="tel:0112478220"
+                      className="text-sm font-bold text-blue-950 hover:text-primary-custom transition-all block mt-0.5"
+                    >
+                      0112478220
                     </a>
                   </div>
                 </div>
